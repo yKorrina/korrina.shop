@@ -12,7 +12,7 @@
       width: 100%;
       margin: 0;
       padding: 0;
-      overflow: hidden; /* Disable scrolling */
+      overflow: hidden;
       background-repeat: repeat;
       background-image: url(https://raw.githubusercontent.com/yKorrina/korrina.shop/main/Pupp400.jpg);
       background-attachment: fixed;
@@ -22,29 +22,32 @@
     .container {
       display: flex;
       flex-direction: column;
-      align-items: flex-start; /* Align to the left */
-      padding-left: 40px; /* Add padding to the left for spacing */
-      padding-top: 20px; /* Add padding to the top for spacing */
+      align-items: center;
+      text-align: center;
+      padding-top: 20px;
     }
     .heading {
       color: red;
-      font-size: 50px;
-      text-shadow: 2px 2px 4px #000000; /* Add a slight shadow for better readability */
-      margin: 20px 0;
+      font-size: 48px;
+      text-shadow: 1px 1px 3px #000000;
+      margin: 5px 0;
     }
     .footer-link {
-      font-size: 30px;
+      font-size: 28px;
       color: rgb(255, 0, 0);
       text-decoration: none;
       opacity: .7;
-      transition: opacity 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+      transition: opacity 0.3s, transform 0.3s;
+      display: block;
+      transform-origin: left center;
+      font-smoothing: antialiased;
     }
     .footer-link:hover {
-      opacity: 1; /* Full opacity on hover */
-      transform: scale(1.1); /* Slightly enlarge the text on hover */
+      opacity: 1;
+      transform: scale(1.05);
     }
-    h1.footer-link-container {
-      margin: 10px 0;
+    .footer-link-container {
+      margin: 2px 0;
     }
   </style>
 </head>
