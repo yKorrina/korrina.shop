@@ -84,11 +84,9 @@
     <h1 class="footer-link-container"><a class="footer-link" href="https://x.com/EvilThighjob" target="_blank">twitter</a></h1>
     <h1 class="footer-link-container"><a class="footer-link footer-link-4kae" href="https://www.discord.gg/4kae" target="_blank">4kae discord</a></h1>
   </div>
-
   <script>
     const loadingScreen = document.getElementById('loadingScreen');
     const container = document.querySelector('.container');
-    
     let dots = 0;
     const maxDots = 3;
     const loadingText = 'LOADING';
@@ -97,8 +95,7 @@
     const doneFlashTime = 300;
 
     function updateLoadingText() {
-      let dotsText = '.'.repeat(dots);
-      loadingScreen.textContent = loadingText + dotsText;
+      loadingScreen.textContent = loadingText + '.'.repeat(dots);
       dots = (dots + 1) % (maxDots + 1);
     }
 
@@ -126,8 +123,7 @@
     }
 
     function setBackground() {
-      const imageUrl = getRandomImage();
-      document.body.style.background = `url(${imageUrl}) repeat`;
+      document.body.style.background = `url(${getRandomImage()}) repeat`;
     }
 
     window.onload = setBackground;
