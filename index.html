@@ -8,68 +8,32 @@
   <link href="https://raw.githubusercontent.com/yKorrina/korrina.shop/main/Pupp400.jpg" rel="apple-touch-icon"/>
   <style>
     html, body {
-      height: 100%;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      font-family: Arial, sans-serif;
-      color: white;
-      text-transform: uppercase;
+      height: 100%; width: 100%; margin: 0; padding: 0; overflow: hidden;
+      font-family: Arial, sans-serif; color: white; text-transform: uppercase;
       background-size: cover;
     }
     .loading-screen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #000;
-      color: red;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 36px;
-      font-weight: bold;
-      z-index: 9999;
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: #000; color: red; display: flex; justify-content: center;
+      align-items: center; font-size: 36px; font-weight: bold; z-index: 9999;
     }
     .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding-top: 20px;
-      display: none;
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; padding-top: 20px; display: none;
     }
     .heading {
-      color: red;
-      font-size: 48px;
-      text-shadow: 1px 1px 3px #000;
-      margin: 5px 0;
+      color: red; font-size: 48px; text-shadow: 1px 1px 3px #000; margin: 5px 0;
     }
     .footer-link {
-      font-size: 28px;
-      color: red;
-      text-decoration: none;
-      opacity: 0.7;
-      transition: opacity 0.3s, transform 0.3s;
-      display: block;
-      transform-origin: left center;
+      font-size: 28px; color: red; text-decoration: none; opacity: 0.7;
+      transition: opacity 0.3s, transform 0.3s; display: block; transform-origin: left center;
       text-shadow: 1px 1px 3px #000;
     }
     .footer-link:hover {
-      opacity: 1;
-      transform: scale(1.05);
+      opacity: 1; transform: scale(1.05);
     }
-    .footer-link-container {
-      margin: 2px 0;
-    }
-    .footer-link-4kae {
-      color: white;
-      text-decoration: none;
-      background: none;
-      border: none;
-    }
+    .footer-link-container { margin: 2px 0; }
+    .footer-link-4kae { color: white; text-decoration: none; background: none; border: none; }
   </style>
 </head>
 <body>
@@ -88,15 +52,13 @@
     const loadingScreen = document.getElementById('loadingScreen');
     const container = document.querySelector('.container');
     let dots = 0;
-    const maxDots = 3;
-    const loadingText = 'LOADING';
     const updateInterval = 100;
-    const loadingTime = 1300;
+    const loadingTime = 1200;
     const doneFlashTime = 300;
 
     function updateLoadingText() {
-      loadingScreen.textContent = loadingText + '.'.repeat(dots);
-      dots = (dots + 1) % (maxDots + 1);
+      loadingScreen.textContent = 'LOADING' + '.'.repeat(dots);
+      dots = (dots + 1) % 4;
     }
 
     function startLoadingScreen() {
@@ -113,12 +75,11 @@
 
     startLoadingScreen();
 
-    const images = [
-      'https://raw.githubusercontent.com/yKorrina/korrina.shop/main/Pupp400.jpg',
-      'https://raw.githubusercontent.com/yKorrina/korrina.shop/main/pupp2400.jpg'
-    ];
-
     function getRandomImage() {
+      const images = [
+        'https://raw.githubusercontent.com/yKorrina/korrina.shop/main/Pupp400.jpg',
+        'https://raw.githubusercontent.com/yKorrina/korrina.shop/main/pupp2400.jpg'
+      ];
       return images[Math.floor(Math.random() * images.length)];
     }
 
