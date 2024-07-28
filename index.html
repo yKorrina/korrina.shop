@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +14,10 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
-      background: url(https://raw.githubusercontent.com/yKorrina/korrina.shop/main/Pupp400.jpg) repeat;
       font-family: Arial, sans-serif;
       color: white;
       text-transform: uppercase;
+      background-size: cover; /* Ensure the background image covers the entire viewport */
     }
     .container {
       display: flex;
@@ -66,5 +67,23 @@
     <h1 class="footer-link-container"><a class="footer-link" href="https://x.com/EvilThighjob" target="_blank">twitter</a></h1>
     <h1 class="footer-link-container"><a class="footer-link footer-link-4kae" href="https://www.discord.gg/4kae" target="_blank">4kae discord</a></h1>
   </div>
+  <script>
+    const images = [
+      'https://raw.githubusercontent.com/yKorrina/korrina.shop/main/Pupp400.jpg',
+      'https://raw.githubusercontent.com/yKorrina/korrina.shop/main/pupp2400.jpg'
+    ];
+
+    function getRandomImage() {
+      return images[Math.floor(Math.random() * images.length)];
+    }
+
+    function setBackground() {
+      const imageUrl = getRandomImage();
+      console.log('Background Image URL:', imageUrl); // Debugging line
+      document.body.style.background = `url(${imageUrl}) repeat`;
+    }
+
+    window.onload = setBackground;
+  </script>
 </body>
 </html>
