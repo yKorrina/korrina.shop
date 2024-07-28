@@ -1,53 +1,57 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="utf-8"/>
   <title>KORRINA.SHOP</title>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <link href="https://raw.githubusercontent.com/yKorrina/korrina.shop/main/H3i.ico" rel="shortcut icon" type="image/x-icon"/>
   <link href="https://raw.githubusercontent.com/yKorrina/korrina.shop/main/Pupp400.jpg" rel="apple-touch-icon"/>
+  <style>
+    html, body {
+      height: 100%; width: 100%; margin: 0; padding: 0; overflow: hidden;
+      font-family: Arial, sans-serif; color: white; text-transform: uppercase;
+      background-size: auto;
+      background-repeat: repeat;
+      background-position: top left;
+      background-color: black;
+      transition: background-color 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    }
+    .container {
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; padding-top: 50px; opacity: 0; transition: opacity 0.5s ease-in-out;
+    }
+    .container.visible {
+      opacity: 1;
+    }
+    .heading {
+      color: red; font-size: 48px; text-shadow: 1px 1px 3px #000; margin: 5px 0;
+    }
+    .footer-link {
+      font-size: 28px; color: red; text-decoration: none; opacity: 0.7;
+      transition: opacity 0.3s, transform 0.3s; display: block; transform-origin: center center;
+      text-shadow: 1px 1px 3px #000;
+    }
+    .footer-link:hover {
+      opacity: 1; transform: scale(1.05);
+    }
+  </style>
 </head>
-      <h1 class="heading" <span style=
-"
-color: red;
-margin-top: 0px;
-font-family:arial;
-font-size: 50px;
- margin-bottom: 0px;
-outline: 3px red;
-"
->404
- </a>
-    <h1 class="footer-link">
-    <a class="link" href="https://korrina.shop"
-<span style=
-"  
-opacity: .7;
-    margin:0;
-    padding:0;
-  outline-offset: 0px;
-  color: red;
-  mix-blend-mode: normal;
-  outline: 3px red;
-  font-size: 50px;
-  font-style: normal;
-  line-height: 50px;
-font-family:arial;
-  text-decoration: none;
-  display: inline;
-
-color: rgb(255, 0, 0);
-"
- target="_self">CLICK HERE TO GO BACK
-</script>
-  <script 
-    src="https://raw.githubusercontent.com/yKorrina/korrina.shop/main/Stolen%20code.js" 
-type="text/javascript">
-</script>
+<body>
+  <div class="container" id="mainContent">
+    <h1 class="heading">404</h1>
+    <h1 class="footer-link-container"><a class="footer-link" href="https://korrina.shop" target="_self">CLICK HERE TO GO BACK</a></h1>
+  </div>
+  <script>
+    function getRandomImage() {
+      const images = [
+        'https://raw.githubusercontent.com/yKorrina/korrina.shop/main/Pupp400.jpg',
+        'https://raw.githubusercontent.com/yKorrina/korrina.shop/main/pupp2400.jpg'
+      ];
+      return images[Math.floor(Math.random() * images.length)];
+    }
+    document.body.style.backgroundImage = `url(${getRandomImage()})`;
+    const container = document.getElementById('mainContent');
+    container.classList.add('visible');
+  </script>
 </body>
 </html>
-<style type="text/css" id="custom-design-rules-style" data-design="{}">
-    body {
-            background-position: top;
-            background-repeat: repeat;
-        background-image: url(https://raw.githubusercontent.com/yKorrina/korrina.shop/main/Pupp400.jpg);
-            background-attachment:fixed;
-    }
