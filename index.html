@@ -1,17 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-    <meta property="og:title" content="KORRINA.SHOP" />
-    <meta property="og:description" content="I LOVE YOU" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/yKorrina/korrina.shop/main/Pupp400.jpg" />
-    <meta property="og:url" content="https://korrina.shop" />
-    <meta property="og:type" content="website" />
-    <!-- Optional tags -->
-    <meta property="og:site_name" content="" />
-    <meta property="og:image:width" content="400" />
-    <meta property="og:image:height" content="400" />
+  <meta property="og:title" content="KORRINA.SHOP"/>
+  <meta property="og:description" content="I LOVE YOU"/>
+  <meta property="og:image" content="https://raw.githubusercontent.com/yKorrina/korrina.shop/main/Pupp400.jpg"/>
+  <meta property="og:url" content="https://korrina.shop"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image:width" content="400"/>
+  <meta property="og:image:height" content="400"/>
   <title>KORRINA.SHOP</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <link href="https://raw.githubusercontent.com/yKorrina/korrina.shop/main/H3i.ico" rel="shortcut icon" type="image/x-icon"/>
@@ -22,6 +19,7 @@
       font-family: Arial, sans-serif; color: white; text-transform: uppercase;
       background-size: auto;
       background-repeat: repeat;
+      background-position: top left;
       background-color: black;
       transition: background-color 0.5s ease-in-out, background-image 0.5s ease-in-out;
     }
@@ -42,7 +40,7 @@
     }
     .footer-link {
       font-size: 28px; color: red; text-decoration: none; opacity: 0.7;
-      transition: opacity 0.3s, transform 0.3s; display: block; transform-origin: left center;
+      transition: opacity 0.3s, transform 0.3s; display: block; transform-origin: center center;
       text-shadow: 1px 1px 3px #000;
     }
     .footer-link:hover {
@@ -87,15 +85,12 @@
           loadingScreen.style.opacity = 0;
           document.body.style.backgroundImage = `url(${getRandomImage()})`;
           container.classList.add('visible');
-          document.body.style.backgroundColor = '';
           setTimeout(() => {
             loadingScreen.style.display = 'none';
           }, fadeDuration);
         }, doneFlashTime);
       }, loadingTime);
     }
-
-    startLoadingScreen();
 
     function getRandomImage() {
       const images = [
@@ -104,6 +99,8 @@
       ];
       return images[Math.floor(Math.random() * images.length)];
     }
+
+    startLoadingScreen();
   </script>
 </body>
 </html>
